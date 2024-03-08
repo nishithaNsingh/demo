@@ -3,12 +3,14 @@ class Video {
   final String title;
   final String thumbnailUrl;
   final String channelTitle;
+  int? viewCount;
 
   Video({
     required this.id,
     required this.title,
     required this.thumbnailUrl,
     required this.channelTitle,
+
   });
 
   factory Video.fromMap(Map<String, dynamic> snippet) {
@@ -19,4 +21,6 @@ class Video {
       channelTitle: snippet['channelTitle'],
     );
   }
+
+  // get viewCount => null;
 }
